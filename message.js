@@ -10,6 +10,7 @@ client.messages
     .create({
         body: "Hello from node plus twilio",
         from: `${twilioPhoneNo}`,
-        to: "+15558675310",
+        to: "+959400495500",
     })
-    .then((message) => console.log(message.sid));
+    .then((message) => console.log(message))
+    .catch((e) => console.log(e));
