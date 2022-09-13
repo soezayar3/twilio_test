@@ -1,7 +1,7 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import * as dotenv from "dotenv";
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("APP IS RUNNING");
+    res.send(`${accountSid} : ${authToken}`);
 });
 
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
