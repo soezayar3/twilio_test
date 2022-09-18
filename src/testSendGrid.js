@@ -4,9 +4,9 @@ dotenv.config();
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const msg = {
-    to: "koszyar@gmail.com",
+    to: "email",
     from: process.env.FROM_EMAIL,
-    name: "Ko Szyar",
+    name: "name",
     subject: "Sending with Twilio SendGrid is Fun",
     text: "and easy to do anywhere, even with Node.js",
     html: "<strong>and easy to do anywhere, even with Node.js</strong>",
