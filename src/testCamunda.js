@@ -21,7 +21,7 @@ camundaClient.subscribe("SendEmail", async ({ task, taskService }) => {
         const sendSMS = await client.messages.create({
             body: "Hello from node plus camunda plus twilio",
             from: `${twilioPhoneNo}`,
-            to: "+959400495500",
+            to: payload.receiver,
         });
         if (sendSMS?.body) {
             console.log(sendSMS);
